@@ -1,0 +1,379 @@
+/* Below 1344 pixels -- smaller desktop width */
+
+@media (max-width: 84em) {
+  .hero {
+    max-width: 120rem;
+  }
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+  .container {
+    max-width: 100rem;
+  }
+  .meal-title {
+    font-size: 2.4rem;
+  }
+  .meal-content {
+    padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+  }
+  .section--testimonial.grid {
+    grid-template-columns: 1fr;
+  }
+  .section--gallery.grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .featured-logo {
+    height: 3rem;
+  }
+}
+
+/* Below 1200 pixels width - landscape tablets */
+
+@media (max-width: 75em) {
+  html {
+    /* 9px font size */
+    font-size: 56.25%;
+  }
+  .grid-start {
+    column-gap: 0rem;
+  }
+  .header {
+    padding: 0 3.2rem;
+  }
+  .hero {
+    gap: 4.8rem;
+  }
+
+  .main-nav-list {
+    gap: 3.2rem;
+  }
+
+  .cta-grid {
+    column-gap: 0;
+  }
+}
+
+/* Below 932px -- Tablets  */
+
+@media (max-width: 58.25em) {
+  html {
+    /* 8px font size */
+    font-size: 50%;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    row-gap: 6.4rem;
+  }
+  .delivered-imgs {
+    justify-content: center;
+    margin-top: 3.2rem;
+  }
+
+  .hero-img {
+    width: 60%;
+  }
+  .heading-primary {
+    font-size: 3.6rem;
+  }
+  .heading-secondary {
+    font-size: 2.4rem;
+  }
+  .heading-tertiary {
+    font-size: 2.1rem;
+  }
+  .featured-logo {
+    height: 2.4rem;
+  }
+  .step-number {
+    font-size: 7.4rem;
+  }
+  .grid-start {
+    grid-template-columns: 1fr;
+    row-gap: 0;
+  }
+
+  .section--gallery {
+    grid-column: 1/-1;
+    grid-row: 2;
+  }
+
+  .section--testimonial.grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .section--gallery.grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .cta-grid {
+    grid-template-columns: 3fr 2fr;
+  }
+  .cta-form {
+    grid-template-columns: 1fr;
+  }
+  .btn--form {
+    margin-top: 1.2rem;
+  }
+}
+
+/* Below 832px -- Tablets (Intemdiary)  */
+
+@media (max-width: 52em) {
+  .container {
+    max-width: 84rem;
+    /* 672px */
+  }
+  .btn-mobile-nav {
+    display: block;
+  }
+
+  .header {
+    position: relative;
+  }
+
+  .main-nav {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    border-radius: 11px;
+    padding: 4rem;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: all 0.5s ease-in;
+  }
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+  .nav-open .main-nav {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+    visibility: visible;
+  }
+  .nav-open .btn-mobile-nav ion-icon[name="menu"] {
+    display: none;
+  }
+
+  .nav-open .btn-mobile-nav ion-icon[name="close"] {
+    display: block;
+  }
+
+  .section-how .grid {
+    column-gap: 0;
+    row-gap: 6.4rem;
+  }
+
+  .section-meals .grid {
+    /* column-gap: 2.4rem; */
+    grid-template-columns: 2fr 2fr 1fr;
+  }
+
+  .pricing-plan--complete::before {
+    right: -28%;
+    top: 4%;
+    font-size: 1.2rem;
+  }
+}
+
+/* Below 720px -- Smaller Tablets (Intemdiary)  */
+
+@media (max-width: 45em) {
+  .section-meals .grid,
+  .grid--4cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero-img {
+    width: 100%;
+  }
+  .section--gallery.grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .diet-list {
+    grid-column: 1/-1;
+  }
+  .heading-secondary {
+    margin-bottom: 4.8rem;
+  }
+  .footer {
+    padding: 9.6rem 0 4.8rem 0;
+  }
+  .section--cta {
+    padding: 4.8rem 0 9.6rem;
+  }
+  .footer-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .link-col {
+    grid-row: 1;
+    grid-column: span 2;
+    margin-bottom: 3.2rem;
+  }
+  .logo-col,
+  .contact-col {
+    grid-row: 2;
+    grid-column: span 3;
+  }
+  .meal-card {
+    width: 85%;
+  }
+  .section-meals .grid {
+    column-gap: 0;
+  }
+  .section-how .container,
+  .footer .container,
+  .section--pricing .container,
+  .section--cta .container {
+    padding: 0 3.6rem;
+  }
+  .pricing-plan {
+    width: 100%;
+  }
+}
+
+/* 620px -- Mobile Screens */
+
+@media (max-width: 37.5em) {
+  .grid--2cols,
+  .grid--4cols {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero {
+    padding: 0 3.6rem;
+  }
+
+  .section-meals .grid {
+    grid-template-columns: 1fr !important;
+    max-width: 70%;
+  }
+
+  .section--testimonial.grid {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+    margin-top: 4.8rem;
+  }
+  .grid:not(:last-child) {
+    margin-bottom: 4.8rem;
+  }
+  .left-testimonials {
+    padding: 3.2rem 6.4rem 6.4rem;
+  }
+  .section-meals,
+  .section--pricing {
+    padding: 4.8rem 0;
+  }
+
+  .step-img-box:first-child {
+    grid-row: 1;
+  }
+
+  .step-text-box:first-child {
+    grid-row: 2;
+  }
+  .step-img-box:last-child {
+    grid-row: 5;
+  }
+
+  .step-img-box {
+    transform: translateY(2.4rem);
+  }
+
+  .section-meals .grid {
+    margin: 0 auto;
+    row-gap: 4.8rem;
+  }
+  .pricing-plan {
+    width: 85%;
+    justify-self: center;
+  }
+  .section--gallery.grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  .section--pricing .grid {
+    row-gap: 4.8rem;
+  }
+  .pricing-plan--complete::before {
+    top: 5%;
+    right: -13%;
+  }
+  .section-hero {
+    padding: 2.4rem 0 4.8rem 0;
+  }
+  .featured-logo {
+    height: 1.2rem;
+  }
+  .cta-grid {
+    grid-template-columns: 1fr;
+    row-gap: 0;
+  }
+  .cta-img-container {
+    grid-row: 1;
+    height: 32rem;
+    border-radius: 11px 11px 0 0;
+  }
+  .cta--form {
+    padding: 1.6rem 3.2rem;
+  }
+  .cta--form .heading-secondary {
+    margin-bottom: 2.4rem;
+  }
+  .cta-text {
+    margin-bottom: 3.2rem;
+  }
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 2.4rem 1.6rem;
+  }
+}
+
+@media (max-width: 31.25em) {
+  .pricing-plan--complete::before {
+    top: 5%;
+    right: -17%;
+  }
+}
+
+@media (max-width: 22.75em) {
+  html {
+    font-size: 43.75%;
+  }
+  .pricing-plan--complete::before {
+    top: 5%;
+    right: -21%;
+  }
+}
+
+@media (max-width: 20em) {
+  html {
+    font-size: 37.5%;
+  }
+}
+
+/* Typography system:
+
+12.8 | 16 | 20 | 25 | 31.25 | 39.06 | 48.83 | 61.04 | 76.29 | 95.37
+
+
+/* Spacing system:
+2 / 4 / 8/ 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */

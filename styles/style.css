@@ -1,0 +1,780 @@
+/* Typography system:
+
+12.8 | 16 | 20 | 25 | 31.25 | 39.06 | 48.83 | 61.04 | 76.29 | 95.37
+
+font weight -
+  default - 400
+line weight -
+  default - 1
+
+main color - #e67e22 
+Tints - #fdf2e9, #fae5d3
+  Shades - #cf711f; #eb984e; #45260a;
+Accents -
+Greys-#555
+#333
+
+--shadows - 
+
+--border radius - 9px, 11px
+
+Spacing system:
+2 / 4 / 8/ 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+
+*/
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4.8rem;
+  background-color: #fdf2e9;
+  height: 9.6rem;
+}
+
+.logo {
+  height: 2.2rem;
+}
+
+/* header -- navigation */
+
+.main-nav-list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 4.8rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #cf711f;
+}
+
+.last-nav-link,
+.last-nav-link:link,
+.last-nav-link:visited {
+  display: inline-block;
+  background-color: #e67e22;
+  color: #fdf2e9;
+  padding: 1.2rem 2.4rem;
+  transition: all 0.3s;
+  border-radius: 9px;
+}
+
+.last-nav-link:hover,
+.last-nav-link:active {
+  background-color: #cf711f;
+}
+
+/* Mobile */
+
+.btn-mobile-nav {
+  border: none;
+  cursor: pointer;
+  background-color: #fdf2e9;
+  display: none;
+  z-index: 10;
+}
+
+.btn-mobile-nav ion-icon {
+  color: #333;
+  font-size: 3.2rem;
+}
+
+.btn-mobile-nav ion-icon[name="close"] {
+  display: none;
+}
+
+/* Sticky header */
+
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+  z-index: 5;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+
+.sticky .section-hero {
+  margin-top: 9.6rem;
+}
+
+.sticky .section-how,
+.sticky .section-meals,
+.sticky .section--testimonials-and-gallery,
+.sticky .section--pricing,
+.sticky .section--cta {
+  padding-top: 9.6rem;
+}
+
+/* Hero section */
+
+.section-hero {
+  background-color: #fdf2e9;
+  padding: 4.8rem 0 9.6rem 0;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 130rem;
+  gap: 9.6rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  align-items: center;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.hero-img-box {
+  align-self: center;
+}
+
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.6;
+  letter-spacing: -0.2px;
+  margin-bottom: 4.8rem;
+}
+
+.delivered-imgs {
+  margin-top: 8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.face {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  margin-right: -3.2rem;
+  border: 3px solid #fdf2e9;
+}
+
+.delivered-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-left: 3.2rem;
+  text-align: center;
+}
+
+.delivered-text span {
+  color: #cf711f;
+  font-weight: 700;
+}
+
+/* Featured in section  */
+
+.section-featured {
+  padding: 4.8rem 0;
+}
+
+.section-featured h3 {
+  text-align: center;
+  margin-bottom: 2.4rem;
+  font-size: 1.4rem;
+  color: #888;
+}
+
+.featured-in {
+  display: flex;
+  justify-content: space-around;
+}
+
+.featured-logo {
+  height: 3.2rem;
+  filter: brightness(0);
+  opacity: 50%;
+}
+
+/* How it works section */
+
+.section-how {
+  padding: 3.2rem 0;
+}
+
+.step-number {
+  font-size: 8.6rem;
+  font-weight: 600;
+  color: #ddd;
+  margin-bottom: 1.2rem;
+}
+
+.step-img-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.step-img-box::before,
+.step-img-box::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.step-img-box::after {
+  background-color: #fae5d3;
+  width: 45%;
+  padding-bottom: 45%;
+  z-index: -1;
+}
+
+.step-img-box::before {
+  background-color: #fdf2e9;
+  width: 60%;
+  padding-bottom: 60%;
+  z-index: -2;
+}
+
+.step-img {
+  width: 35%;
+}
+
+.step-description {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+/* Meal section */
+
+.section-meals {
+  padding: 9.6rem 0;
+}
+
+.meal-card {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.2);
+  border-radius: 11px;
+  justify-self: center;
+  transition: all 0.4s;
+}
+
+.meal-card:hover {
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-1.2rem);
+}
+
+.meal-img-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.6rem;
+  border-radius: 11px;
+}
+
+.meal-img {
+  width: 100%;
+  border-radius: 11px 11px 0px 0px;
+}
+
+.meal-title {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.6rem;
+  color: #333;
+  font-weight: 400;
+  margin-bottom: 1.2rem;
+}
+
+.meal-stats {
+  list-style: none;
+  font-size: 1.8rem;
+}
+
+.stat-icon {
+  font-size: 2.4rem;
+  color: #e67e22;
+}
+
+.meal-tag {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.meal-tag span {
+  display: inline-block;
+  color: #333;
+  padding: 0.6rem;
+  border-radius: 9px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.meal-content {
+  padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+}
+
+.vegetarian {
+  background-color: #51cf66;
+}
+
+.vegan {
+  background-color: #94d82d;
+}
+
+.paleon {
+  background-color: #fcc419;
+}
+
+.diet-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.diet {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.diet li {
+  list-style: none;
+  text-align: left;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.diet-icon {
+  color: #e67e22;
+  font-size: 1.8rem;
+}
+
+.all-recipes {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+/* Testimonial section */
+
+.grid-start {
+  column-gap: 0;
+  grid-template-columns: 1.25fr 1fr;
+}
+
+.section--testimonials-and-gallery {
+  background-color: #fdf2e9;
+}
+
+.section--testimonial {
+  grid-row: 1;
+  grid-column: 1;
+  margin-top: 9.6rem;
+}
+
+.left-testimonials {
+  padding: 6.4rem;
+}
+
+.testimonial-face {
+  width: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+
+.section--testimonial.grid {
+  column-gap: 8rem;
+  row-gap: 8rem;
+  align-items: start;
+}
+
+.testimonial-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+}
+
+.testimonial-name {
+  font-size: 1.6rem;
+  color: #6f6f6f;
+}
+
+.section--gallery {
+  grid-row: 1/-1;
+  grid-column: 2;
+  padding: 1.6rem;
+  align-self: center;
+}
+
+.section--gallery.grid {
+  row-gap: 0.4rem;
+  column-gap: 0.4rem;
+}
+
+.gallery-img {
+  width: 100%;
+  transition: all 0.4s;
+}
+
+.gallery-img:hover {
+  transform: scale(1.1);
+}
+
+.gallery-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.grid.test-gallery-titles {
+  column-gap: 6.4rem;
+  align-items: center;
+}
+
+.testimonial-titles {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+/* Pricing section */
+
+.section--pricing {
+  padding: 9.6rem 0;
+}
+
+.section--pricing .heading-secondary {
+  margin-bottom: 4.8rem;
+}
+
+.pricing-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  font-size: 1.8rem;
+  list-style: none;
+}
+
+.pricing-list li {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.price-icon {
+  font-size: 1.8rem;
+  color: #e67e22;
+}
+
+.plan-header {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+
+.plan-name {
+  color: #cf711f;
+  font-weight: 600;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75;
+  margin-bottom: 3.2rem;
+}
+.plan-price {
+  font-size: 6.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.6rem;
+}
+.plan-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #6f6f6f;
+}
+
+.plan-price span {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-right: 0.8rem;
+}
+
+.diet-description {
+  line-height: 1.2;
+}
+
+.plan-sign-up {
+  text-align: center;
+  margin-top: 4.8rem;
+}
+
+.pricing-plan {
+  border-radius: 11px;
+
+  width: 75%;
+}
+
+.pricing-plan--starter {
+  justify-self: end;
+  border: 2px solid #fdf2e9;
+  padding: 4.6rem;
+}
+
+.pricing-plan--complete {
+  background-color: #fdf2e9;
+  padding: 4.8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-plan--complete:before {
+  content: "Best value";
+  position: absolute;
+  top: 6%;
+  right: -18%;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  background-color: #fcc419;
+  padding: 0.8rem 8rem;
+  transform: rotate(45deg);
+}
+
+/* Feature section */
+
+.plan-details {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.feature-icon {
+  color: #e67e22;
+  font-size: 3.2rem;
+  background-color: #fdf2e9;
+  padding: 1.6rem;
+  border-radius: 50%;
+  margin-bottom: 3.2rem;
+}
+.feature-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+.feature-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+/* CTA section */
+
+.section--cta {
+  padding: 4.8rem 0 12.8rem;
+}
+
+.cta-grid {
+  grid-template-columns: 2fr 1fr;
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  border-radius: 11px;
+}
+
+.cta--form {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+}
+
+.cta-img-container {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(235, 151, 78, 0.35),
+      rgba(230, 125, 34, 0.35)
+    ),
+    url("../img/eating.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 11px 11px 0;
+  overflow: hidden;
+}
+
+.input-label {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+.input-field,
+.cta-form select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  border: none;
+  color: inherit;
+  background-color: #fdf2e9;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.input-field::placeholder {
+  color: #aaa;
+}
+
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  color: #45260a;
+  margin-bottom: 4.8rem;
+}
+
+.cta--form .heading-secondary {
+  color: #45260a;
+  margin-bottom: 3.2rem;
+}
+
+.cta-form {
+  column-gap: 3.6rem;
+  row-gap: 2.4rem;
+}
+
+/* Footer */
+
+.footer {
+  padding: 12.8rem 0 4.8rem 0;
+  border-top: 1px solid #eee;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+  column-gap: 1.8rem;
+  row-gap: 3.2rem;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-links {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer .logo {
+  margin-bottom: 4rem;
+}
+
+.logo-link {
+  display: inline-block;
+}
+
+.social-icon-list {
+  display: flex;
+  list-style: none;
+  gap: 2.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.social-icon-list a {
+  display: inline-block;
+}
+
+.social-icon-list a:focus {
+  box-shadow: none;
+}
+
+.social-icon {
+  color: #767676;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.social-icon:hover {
+  color: #e67e22;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  color: #767676;
+  line-height: 1.4;
+  font-weight: 400;
+  margin-top: auto;
+}
+
+.footer-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
+}
+
+.contact-detail {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.footer-contact-link:link,
+.footer-contact-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  width: fit-content;
+  color: #45260a;
+  transition: all 0.3s;
+}
+
+.footer-contact-link:hover,
+.footer-contact-link:active {
+  color: #e67e22;
+}
+
+.footer-link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+  list-style: none;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  display: inline-block;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-decoration: none;
+  color: #767676;
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #e67e22;
+}

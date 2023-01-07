@@ -35,6 +35,9 @@ for (let i = 0; i < navLinks.length; i++) {
 }
 
 for (let i = 0; i < allLinks.length; i++) {
+  if (allLinks[i].classList.contains("footer-contact-link")) {
+    continue;
+  }
   allLinks[i].addEventListener("click", function (e) {
     e.preventDefault();
     const href = allLinks[i].getAttribute("href");
